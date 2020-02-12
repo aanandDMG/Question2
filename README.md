@@ -14,3 +14,7 @@ Details
 externalIPs section, it should be any public IPaddress having port 80 opened.
 
 3 Once all above steps are done kindly verify endpoints from, kubectl describe services <service-name-listed-in-service.yaml>
+
+
+
+**Note : ExternalIPS is for the bare metals, on cloud they take care of the public ip part.
