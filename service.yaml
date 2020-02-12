@@ -1,0 +1,16 @@
+#This YAML is for the LoadBalncer Service with externalIP address defined
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-goals101-service
+spec:
+  selector:
+    app: nginx-goals101
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  externalIPs:
+    - 3.89.60.178

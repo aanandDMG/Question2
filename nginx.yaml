@@ -1,0 +1,23 @@
+#This Yaml will create Deployment for Nginx with 3 replicas
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-goals101
+  labels:
+    app: nginx-goals101
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-goals101
+  template:
+    metadata:
+      name: nginx-goals101
+      labels:
+        app: nginx-goals101
+    spec:
+      containers:
+        - name: nginx-goals101
+          image: nginx
+        
